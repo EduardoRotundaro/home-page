@@ -1,10 +1,15 @@
 import React from 'react';
 
 import {APP_VERSION, SECTIONS} from './constants';
+import Section from './Section';
 
 function renderSections () {
     return SECTIONS.map( ({name, links}) => (
-        <section>{name}</section>
+        <Section 
+            key={name}
+            title={name} 
+            links={links} 
+        />
     ));
 }
 
